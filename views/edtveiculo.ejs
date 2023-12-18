@@ -1,0 +1,21 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%=Veiculo._id%>"><br>
+    <label for="veiCod">Código do Veiculo</label>
+    <input type="number" name="veiCod" id="veiCod" required placeholder="Digite o Código do Veiculo" value="<%=Veiculo.veiCod%>"><br>
+    <label for="veiPlaca">Placa do Veiculo</label>
+    <input type="text" name="veiPlaca" id="veiPlaca" required placeholder="Informe a Placa do Veiculo"
+    value="<%=Veiculo.veiPlaca%>"><br>
+    <label for="veiCor">Cor do Veiculo</label>
+    <input type="text" name="veiCor" id="veiCor" required placeholder="Informe a Cor do Veiculo" 
+    value="<%=Veiculo.veiCor%>"><br>
+    <label for="veiModel">Modelo do Veiculo</label>
+    <input type="text" name="veiModel" id="veiModel" required placeholder="Informe o Modelo do Veiculo" 
+    value="<%=Veiculo.veiModel%>"><br>
+    <label for="veiMarca">Marca do Veiculo</label>
+    <input type="text" name="veiMarca" id="veiMarca" required placeholder="Informe a Marca do Veiculo" 
+    value="<%=Veiculo.veiMarca%>"><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

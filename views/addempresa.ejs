@@ -1,0 +1,15 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="empCod">Codigo da Empresa</label>
+    <input type="number" name="empCod" id="empCod" required placeholder="Digite o Código da Empresa"><br>
+    <label for="empLocal">Local Empresa</label>
+    <input type="text" name="empLocal" id="empLocal" required placeholder="Informe o Local da Empresa"><br>
+    <label for="empFunc">Numero de Funcionarios da Empresa</label>
+    <input type="number" name="empFunc" id="empFunc" required placeholder="Informe o Numero de Funcionarios da Empresa"><br>
+    <label for="empNome">Nome da Empresa</label>
+    <input type="text" name="empNome" id="empNome" required placeholder="Informe o Nome da Empresa"><br>
+    <label for="empTelef">Telefone da Empresa</label>
+    <input type="text" name="empTelef" id="empTelef" required placeholder="Informe o Telefone do Empresa"><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

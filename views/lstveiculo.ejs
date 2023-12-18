@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="lstveiculo.css" media="screen" />
+</head>
+<table>
+<table>
+    <tr>
+        <th>Código do Veiculo</th>
+        <th>Placa do Veiculo</th>
+        <th>Cor do Veiculo</th>
+        <th>Modelo do Veiculo</th>
+        <th>Marca do Veiculo</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Veiculos.forEach(function(veiculo){%>
+    <tr>
+        <td><%=veiculo.veiCod%></td>
+        <td><%=veiculo.veiPlaca%></td>
+        <td><%=veiculo.veiCor%></td>
+        <td><%=veiculo.veiModel%></td>
+        <td><%=veiculo.veiMarca%></td>
+        <td><a href="/edtveiculo/<%=veiculo._id%>">Editar</a></td>
+        <td><a href="/delveiculo/<%=veiculo._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,15 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="veiCod">Código do Veiculo</label>
+    <input type="number" name="veiCod" id="veiCod" required placeholder="Digite o Código do Veiculo"><br>
+    <label for="veiPlaca">Placa do Veiculo</label>
+    <input type="text" name="veiPlaca" id="veiPlaca" required placeholder="Informe a Placa do Veiculo"><br>
+    <label for="veiCor">Cor do Veiculo</label>
+    <input type="text" name="veiCor" id="veiCor" required placeholder="Informe a Cor do Veiculo"><br>
+    <label for="veiModel">Modelo do Veiculo</label>
+    <input type="text" name="veiModel" id="veiModel" required placeholder="Informe o Modelo do Veiculo"><br>
+    <label for="veiMarca">Marca do Veiculo</label>
+    <input type="text" name="veiMarca" id="veiMarca" required placeholder="Informe a Marca do Veiculo"><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

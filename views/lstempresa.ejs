@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="lstempresa.css" media="screen" />
+</head>
+<body>
+
+<table>
+    <tr>
+        <th scope="col">Código da Empresa</th>
+        <th scope="col" >Local da Empresa</th>
+        <th scope="col" >Numero de Funcionarios da Empresa</th>
+        <th scope="col" >Nome da Empresa</th>
+        <th scope="col" >Telefone da Empresa</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Empresas.forEach(function(empresa){%>
+    <tr>
+        <td><%=empresa.empCod%></td>
+        <td><%=empresa.empLocal%></td>
+        <td><%=empresa.empFunc%></td>
+        <td><%=empresa.empNome%></td>
+        <td><%=empresa.empTelef%></td>
+        <td><a href="/edtempresa/<%=empresa._id%>">Editar</a></td>
+        <td><a href="/delempresa/<%=empresa._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

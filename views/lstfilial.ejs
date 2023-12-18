@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="lstfilial.css" media="screen" />
+</head>
+<table>
+    <tr>
+        <th>Numero de Funcionarios da Filial</th>
+        <th>Telefone da Filial</th>
+        <th>Local da Filial</th>
+        <th>Numero da Filial</th>
+        <th>Empresa da Filial</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Filiais.forEach(function(filial){%>
+    <tr>
+        <td><%=filial.filFunc%></td>
+        <td><%=filial.filTelef%></td>
+        <td><%=filial.filLocal%></td>
+        <td><%=filial.filNum%></td>
+        <td><%=filial.empresa.nome%></td>
+        <td><a href="/edtfilial/<%=filial._id%>">Editar</a></td>
+        <td><a href="/delfilial/<%=filial._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

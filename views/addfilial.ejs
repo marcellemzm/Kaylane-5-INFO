@@ -1,0 +1,19 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="filFunc">Numero de Funcionarios da Filial</label>
+    <input type="number" name="filFunc" id="filFunc" required placeholder="Informe o Numero de Funcionarios da Filial"><br>
+    <label for="filTelef">Telefone da Filial</label>
+    <input type="text" name="filTelef" id="filTelef" required placeholder="Informe o Telefone da Filial"><br>
+    <label for="filLocal">Local da Filial</label>
+    <input type="text" name="filLocal" id="filLocal" required placeholder="Informe o Local da Filial"><br>
+    <label for="filNum">Numero da Filial</label>
+    <input type="number" name="filNum" id="filNum" required placeholder="Informe o Numero da Filial"><br>
+    <label for="empresa">Empresa da Filial</label>
+    <select name="empresa" id="empresa">
+        <%Empresas.forEach(function(empresa){%>
+            <option value="<%=empresa._id%>"><%=empresa.empNome%></option>
+        <% }) %>
+    </select>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

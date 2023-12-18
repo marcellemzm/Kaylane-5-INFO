@@ -1,0 +1,24 @@
+<%-include('cabecalho.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar</title>
+</head>
+<body>
+    <form method="post">
+        <label for="cliNome">Nome do Cliente</label>
+        <input type="text" name="cliNome" id="cliNome" required placeholder="Informe o Nome do Cliente"><br>
+        <label for="cliHistorico">Historico do Cliente</label>
+        <input type="text" name="cliHistorico" id="cliHistorico" required placeholder="Informe o Historico do Cliente"><br>
+        <label for="cliCPF">CPF do Cliente</label>
+        <input type="text" name="cliCPF" id="cliCPF" required placeholder="Informe o CPF do Cliente"><br>
+        <label for="cliEnd">Endereco do Cliente</label>
+        <input type="text" name="cliEnd" id="cliEnd" required placeholder="Informe o Endereco do Cliente"><br>
+        <label for="cliCod">Código do Cliente</label>
+        <input type="number" name="cliCod" id="cliCod" required placeholder="Digite o Código do Cliente"><br>
+        <input type="submit" value="Adicionar">
+    </form>
+</body>
+</html>

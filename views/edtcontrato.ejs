@@ -1,0 +1,41 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%=Contrato._id%>"><br>
+    <label for="contData">Data do Contrato</label>
+    <input type="date" name="contData" id="contData" required placeholder="Informe a Data do Contrato" 
+    value="<%=Contrato.contData%>"><br>
+    <label for="contFormPaga">Forma de Pagamento do Contrato</label>
+    <input type="text" name="contFormPaga" id="contFormPaga" required placeholder="Informe a Forma de Pagamento do Contrato"
+    value="<%=Contrato.contFormPaga%>"><br>
+    <label for="contCod">Codigo do Contrato</label>
+    <input type="number" name="contCod" id="contCod" required placeholder="Digite o Codigo do Contrato" 
+    value="<%=Contrato.contCod%>"><br>
+    <label for="contValor">Valor do Contrato</label>
+    <input type="number" name="contValor" id="contValor" required placeholder="Informe o Valor do Contrato" 
+    value="<%=Contrato.contValor%>"><br>
+    <label for="contDataEntrg">Data de Entrega do Contrato</label>
+    <input type="date" name="contDataEntrg" id="contDataEntrg" required placeholder="Informe a Data de Entrega do Contrato" 
+    value="<%=Contrato.contDataEntrg%>"><br>
+
+    <label for="cliente">Cliente</label>
+    <select name="cliente" id="cliente">
+        <%Clientes.forEach(function(cliente){%>
+            <option value="<%=cliente._id%>"><%=cliente.cliNome%></option>
+        <% }) %>
+    </select>
+    <label for="veiculo">Veiculo</label>
+    <select name="veiculo" id="veiculo">
+        <%Veiculos.forEach(function(veiculo){%>
+            <option value="<%=veiculo._id%>"><%=veiculo.veiPlaca%></option>
+        <% }) %>
+    </select>
+    <label for="filial">Filial</label>
+    <select name="filial" id="filial">
+        <%Filiais.forEach(function(filial){%>
+            <option value="<%=filial._id%>"><%=filial.filLocal%></option>
+        <% }) %>
+    </select>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

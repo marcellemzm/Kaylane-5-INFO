@@ -1,0 +1,22 @@
+<%-include('cabecalho.ejs')%>
+<form method="post">
+    <label for="id">Id</label>
+    <input type="text" name="id" id="id" required readonly value="<%=Cliente._id%>"><br>
+    <label for="cliNome">Nome do Cliente</label>
+    <input type="text" name="cliNome" id="cliNome" required placeholder="Digite o Nome do Cliente" 
+    value="<%=Cliente.cliNome%>"><br>
+    <label for="cliHistorico">Historico do Cliente</label>
+    <input type="text" name="cliHistorico" id="cliHistorico" required placeholder="Informe o Historico Cliente"
+    value="<%=Cliente.cliHistorico%>"><br>
+    <label for="cliCPF">CPF do Cliente</label>
+    <input type="text" name="cliCPF" id="cliCPF" required placeholder="Informe o CPF do Cliente" 
+    value="<%=Cliente.cliCPF%>"><br>
+    <label for="cliEnd">Endereco do Cliente</label>
+    <input type="text" name="cliEnd" id="cliEnd" required placeholder="Informe o Endereco do Cliente" 
+    value="<%=Cliente.cliEnd%>"><br>
+    <label for="cliCod">Código do Cliente</label>
+    <input type="number" name="cliCod" id="cliCod" required placeholder="Informe o Codigo do Cliente" 
+    value="<%=Cliente.cliCod%>"><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="lstcontrato.css" media="screen" />
+</head>
+<body>
+
+<table>
+    <tr>
+        <th scope="col">Data do Contrato</th>
+        <th scope="col">Forma de Pagamento</th>
+        <th scope="col">Código do Contrato</th>
+        <th scope="col">Valor do Contrato</th>
+        <th scope="col">Data de Entrega do Contrato</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Veículo</th>
+        <th scope="col">Filial</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Contratos.forEach(function(contrato){%>
+    <tr>
+        <td><%=contrato.contData%></td>
+        <td><%=contrato.contFormPaga%></td>
+        <td><%=contrato.contCod%></td>
+        <td><%=contrato.contValor%></td>
+        <td><%=contrato.contDataEntrg%></td>
+        <td><%=contrato.cliente.cliNome%></td>
+        <td><%=contrato.veiculo.veiPlaca%></td>
+        <td><%=contrato.filial.filLocal%></td>
+        <td><a href="/edtcontrato/<%=contrato._id%>">Editar</a></td>
+        <td><a href="/delcontrato/<%=contrato._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="lst.css" media="screen" />
+</head>
+<body>
+    <table>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Histórico</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Endereço</th>
+            <th scope="col">Código Cliente</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>       
+
+        <%Clientes.forEach(function(cliente){%>
+            <tr>
+                <td><%=cliente.cliNome%></td>
+                <td><%=cliente.cliHistorico%></td>
+                <td><%=cliente.cliCPF%></td>
+                <td><%=cliente.cliEnd%></td>
+                <td><%=cliente.cliCod%></td>
+                <td><a href="/edtcliente/<%=cliente._id%>">Editar</a></td>
+                <td><a href="/delcliente/<%=cliente._id%>">Delete</a></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
